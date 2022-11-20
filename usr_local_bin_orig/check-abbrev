@@ -7,10 +7,6 @@ set -eo pipefail
 
 ABBREV='<ABBREV>'
 
-echo '###########################'
-echo "BEGIN $ABBREV sanity checks"
-echo '###########################'
-
 # BEGIN: activate NVM
 export NVM_DIR="/home/`whoami`/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -18,73 +14,19 @@ export NVM_DIR="/home/`whoami`/.nvm"
 
 nvm use node # Activate Node
 
-echo '--------------'
-echo 'tree --version'
-tree --version
+source ~/.rvm/scripts/rvm # Activate RVM
+
+echo '###########################'
+echo "BEGIN $ABBREV sanity checks"
+echo '###########################'
 
 echo '-------------'
-echo 'git --version'
-git --version
+echo 'rvm --version'
+rvm --version
 
-echo '--------------'
-echo 'curl --version'
-curl --version
-
-echo '-------'
-echo 'perl -v'
-perl -v
-
-echo '-----------------'
-echo 'ansible --version'
-ansible --version
-
-echo '--------------'
-echo 'heroku version'
-heroku version
-
-echo '-------------------'
-echo 'python2.7 --version'
-python2.7 --version
-
-echo '-----------------'
-echo 'python3 --version'
-python3 --version
-
-echo '--------------'
-echo 'command -v nvm'
-command -v nvm
-
-echo '-------------'
-echo 'nvm --version'
-nvm --version
-
-echo '-----------'
-echo 'npm version'
-npm version
-
-echo '-------'
-echo 'node -v'
-node -v
-
-echo '---------------------'
-echo 'npm list -g --depth 0'
-npm list -g --depth 0
-
-echo '--------------'
-echo 'yarn --version'
-yarn --version
-
-echo '---------------'
-echo 'redis-server -v'
-redis-server -v
-
-echo '----------------'
-echo 'sqlite3 -version'
-sqlite3 -version
-
-echo '--------------'
-echo 'psql --version'
-psql --version
+echo '--------'
+echo 'rvm list'
+rvm list
 
 echo '##############################'
 echo "FINISHED $ABBREV sanity checks"
