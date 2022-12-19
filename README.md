@@ -20,4 +20,4 @@ Specific versions of Ruby
 * This Docker image is a building block for other Docker images for [Ruby on Racetracks](https://www.rubyonracetracks.com/).
 
 ## More Information
-General information common to all Docker Debian build repositories is in the [FAQ](https://gitlab.com/rubyonracetracks/docker-common/blob/master/FAQ.md).
+General information common to all Docker Debian build repositories is in the [FAQ](https://github.com/rubyonracetracks/docker-common/blob/main/FAQ.md).
